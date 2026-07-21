@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine-Operable Open Source</title>
+<meta name="description" content="Making open source repositories work reliably for both the humans and the AI agents that now depend on them.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #5a5a5a;
+    --accent: #2f6f4f; --card: #f5f6f5; --border: #e4e6e4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12140f; --fg: #e8ebe4; --muted: #9aa093;
+      --accent: #7fc79a; --card: #1b1e17; --border: #2a2e24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 88px 0 40px; }
+  .logo {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-weight: 700; letter-spacing: -0.02em; font-size: 15px; color: var(--muted);
+    margin-bottom: 40px; text-transform: uppercase;
+  }
+  .mark {
+    width: 26px; height: 26px; border-radius: 6px; background: var(--accent);
+    display: grid; place-items: center; color: var(--bg); font-weight: 800; font-size: 15px;
+  }
+  h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.12; letter-spacing: -0.03em; margin: 0 0 20px; }
+  .lede { font-size: clamp(17px, 2.4vw, 20px); color: var(--muted); margin: 0 0 8px; }
+  section { padding: 28px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 16px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 22px; margin-bottom: 14px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card h3 a { color: var(--accent); text-decoration: none; }
+  .card h3 a:hover { text-decoration: underline; }
+  .card p { margin: 0 0 12px; color: var(--muted); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px;
+    background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 3px 8px;
+  }
+  .soon { color: var(--muted); font-size: 15px; }
+  a.inline { color: var(--accent); }
+  footer { padding: 40px 0 72px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><span class="mark">M</span> Machine-Operable Open Source</div>
+    <h1>Repositories that work for humans <em>and</em> the machines reading them.</h1>
+    <p class="lede">Open source is increasingly read and acted on by AI agents, not just people. But a repository's signals — its instructions, its examples, its dependency health, its release safety — were built for patient humans who improvise. We make those signals checkable by machines, which helps the machines and the humans alike.</p>
+  </header>
+
+  <section>
+    <h2>Tools</h2>
+    <div class="card">
+      <h3><a href="https://github.com/machine-operable/readme-ci">readme-ci</a></h3>
+      <p>Tests the code examples in your documentation, so “our examples always run” becomes a promise CI enforces instead of a hope.</p>
+      <code>pip install readme-ci</code>
+    </div>
+    <p class="soon">More on the way — agent-readable repository metadata, dependency lifecycle signals, and release crash-testing among them.</p>
+  </section>
+
+  <section>
+    <h2>Approach</h2>
+    <p>Evidence first. We measure a gap at ecosystem scale, ship a small open tool that closes it, and submit real fixes upstream — the intervention <em>is</em> the data. Everything is open source.</p>
+  </section>
+
+  <footer>
+    <a href="https://github.com/machine-operable">github.com/machine-operable</a>
+  </footer>
+</div>
+</body>
+</html>
